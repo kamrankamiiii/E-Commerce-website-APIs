@@ -21,7 +21,7 @@ app.use("/api", productRoute );
 app.use('/api', cartRoute)
 
 
-mongoose.connect('mongodb+srv://ecommerce:datadata@cluster0.8vd3uem.mongodb.net/database')
+mongoose.connect(process.env.MONGO)
 mongoose.connection.on("connected", () => {
   console.log("database connected");
 });
